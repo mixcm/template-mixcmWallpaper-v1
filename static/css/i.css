@@ -1,0 +1,186 @@
+*,*::before,*::after {
+    font-family:"Microsoft YaHei";
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #333;
+    background-image: url(../img/bg-home.png);
+    background-position: center -30px,center 1630px;
+    background-repeat: no-repeat,no-repeat;
+}
+a,a:hover,a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.btn {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    text-transform: inherit;
+}
+::selection {
+    background: rgba(90, 95, 105, .6);
+    color: rgb(255, 255, 255);
+}
+.container {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+.item {
+    border-radius: 4px;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    height: 40px;
+    background-color: rgba(255,255,255,.4);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,.4);
+}
+#instantclick {
+    display: none;
+}
+#header {
+    margin-bottom: 35px;
+    position: relative;
+}
+#header::after,
+#content .content-list::after {
+    content:"";
+    clear: both;
+    display: block;
+}
+#header .header-bk {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: 50% 20%;
+}
+#header .header-black {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,.3);
+    width: 100%;
+}
+#header .header-tab {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #222;
+}
+#header .header-tab .header-tab-menu {
+    font-size: 0;
+}
+#header .header-tab .header-tab-menu a {
+    padding: 0 20px;
+    height: 50px;
+    color: #fff;
+    display: inline-block;
+}
+#header .header-tab .header-tab-menu a.active {
+    background-color: #151515;
+}
+#content .content-list .item {
+    float: left;
+    width: calc(25% - 15px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    height: 200px;
+}
+#content .content-list .item:nth-child(3),
+#content .content-list .item:nth-child(5),
+#content .content-list .item:nth-child(4n+1){
+    margin-right: 0;
+}
+#content .content-list .item:nth-child(1),
+#content .content-list .item:nth-child(4) {
+    margin-right: 20px;
+}
+#content .content-list .item:first-child {
+    width: calc(50% - 10px);
+    height: 420px;
+}
+#content .content-list .item .cover {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+#content .content-list .item .des,
+#content .content-list .item .views {
+    position: absolute;
+}
+#content .content-list .item .des {
+    transition: all .35s;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+}
+#content .content-list .item:hover .des {
+    opacity: 1;
+}
+#content .content-list .item .des p {
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    line-height: 40px;
+}
+#content .content-list .item .des::after {
+    content: "";
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.25));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: block !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#content .content-list .item .views {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 12px 10px 12px 8px;
+    color: #614611;
+    background: #fdce71;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 5;
+}
+#content .content-list .item .views:before {
+    content: "";
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 21px;
+    border-right-color: #fdce71;
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+#content .content-list .item .views:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -3px;
+    height: 6px;
+    width: 6px;
+    border: 1px solid;
+    border-radius: 100%;
+    color: #614611;
+}
